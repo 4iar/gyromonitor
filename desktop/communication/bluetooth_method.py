@@ -15,3 +15,6 @@ class Bluetooth():
             raise e
 
         return True
+
+    def disconnect(self):
+        self.sock.close()
