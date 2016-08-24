@@ -1,6 +1,6 @@
 # placeholder imports
-from .communication.bluetooth_client import Bluetooth
-from .orientation.linux import Monitor
+from communication.bluetooth_client import Bluetooth
+from orientation.linux import Monitor
 from time import sleep
 
 # begin talking to the pi
