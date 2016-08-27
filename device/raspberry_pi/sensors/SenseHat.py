@@ -3,6 +3,7 @@ from sense_hat import SenseHat as SenseHatDriver
 class SenseHat():
     def __init__(self):
         self.sense = SenseHatDriver()
+        self.sense.set_imu_config(False, True, False)  # we only need the gyroscope
 
     def get_orientation(self):
         raw_orientation = self.sense.get_orientation()['yaw']
