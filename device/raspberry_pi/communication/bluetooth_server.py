@@ -17,8 +17,7 @@ class Bluetooth():
             self.accept_connection(client_sock, address)
 
     def accept_connection(self, client_sock, address):
-        data = client_sock.recv(1024)
-        if data == b'GET_ORIENTATION':
-            client_sock.send(str(self.orientation))
-
-        client_sock.close()
+        while True:
+            data = client_sock.recv(1024)
+            if data == b'GET_ORIENTATION':
+                client_sock.send(str(self.orientation))
