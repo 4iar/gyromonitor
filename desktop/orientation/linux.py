@@ -6,7 +6,7 @@ class Monitor():
         self.id = id
 
     def change_orientation(self, new_orientation):
-        if (new_orientation not in [0, 90, 180, 270]):
+        if new_orientation not in [0, 90, 180, 270]:
             raise ValueError("New orientation value is not 0, 90, 180, or 270")
 
         xrandr_orientation_mappings = {
